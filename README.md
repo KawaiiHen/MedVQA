@@ -18,14 +18,14 @@ unknown_tokens = set(token_counter.keys()) - vocab_tokens
 text_processor.tokenizer.add_tokens(list(unknown_tokens))
 ```
   
-5. Training the model on the PathVQA dataset.
+4. Training the model on the PathVQA dataset.
 The model's text embeddings and output layers are extended to handle the newly added tokens
 ```python
 # Extend the embedding and linear layers
 new_embeddings = torch.nn.Embedding(new_vocab_size, current_embeddings.shape[1])
 model.text_encoder.embeddings.word_embeddings = new_embeddings
 ```
-6. Evaluating the model and visualizing the predictions.
+*5. Evaluating the model and visualizing the predictions.*
 
 ## Dataset
 
