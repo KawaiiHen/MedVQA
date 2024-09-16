@@ -1,6 +1,6 @@
 # Medical Visual Question Answering (VQA) with BLIP and PathVQA
 
-This project focuses on building a Medical Visual Question Answering (VQA) system using the BLIP model and the PathVQA dataset. The goal is to analyze medical images and answer corresponding questions about the image content.
+This project focuses on building a Medical Visual Question Answering (VQA) system using the BLIP model (Kindly check our anaylysis of the BLIP model in the FINAL_DL.docx) and the PathVQA dataset. The goal is to analyze medical images and answer corresponding questions about the image content. 
 
 ## Project Overview
 
@@ -19,6 +19,7 @@ text_processor.tokenizer.add_tokens(list(unknown_tokens))
 ```
   
 5. Training the model on the PathVQA dataset.
+The model's text embeddings and output layers are extended to handle the newly added tokens
 ```python
 # Extend the embedding and linear layers
 new_embeddings = torch.nn.Embedding(new_vocab_size, current_embeddings.shape[1])
