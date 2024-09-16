@@ -6,11 +6,11 @@ This project focuses on building a Medical Visual Question Answering (VQA) syste
 
 Medical Visual Question Answering (VQA) involves using machine learning models to automatically provide answers to questions about medical images. This project uses the BLIP (Bootstrapped Language-Image Pretraining) model, fine-tuned with the PathVQA dataset, which contains questions and answers related to medical images.
 
-The workflow involves:
+The workflow involves mainly these 5 steps and some keynote :
 
 1. Loading and preprocessing the PathVQA dataset.
 2. Tokenizing text (questions and answers) and processing images.
-3. Extending the BLIP model to handle the medical vocabulary.
+3. Extending the BLIP model to handle the medical vocabulary. 
 As Medical VQA requires domain-specific vocabulary. The project's tokenizer is expanded to include unknown tokens present in the PathVQA dataset, allowing the model to handle medical terminology.
 ```python
 # Tokenize dataset and add unknown tokens
@@ -33,6 +33,7 @@ We use the **PathVQA** dataset, available via Hugging Face. This dataset consist
 ```python
 from datasets import load_dataset
 dataset = load_dataset("flaviagiammarino/path-vqa")
+```
 
 ## Model Architecture
 The project leverages the BLIP (Bootstrapped Language-Image Pretraining) model, which is pre-trained for visual question answering tasks. The architecture includes:
