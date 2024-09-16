@@ -16,14 +16,14 @@ As Medical VQA requires domain-specific vocabulary. The project's tokenizer is e
 # Tokenize dataset and add unknown tokens
 unknown_tokens = set(token_counter.keys()) - vocab_tokens
 text_processor.tokenizer.add_tokens(list(unknown_tokens))
-
+```
   
 5. Training the model on the PathVQA dataset.
 ```python
 # Extend the embedding and linear layers
 new_embeddings = torch.nn.Embedding(new_vocab_size, current_embeddings.shape[1])
 model.text_encoder.embeddings.word_embeddings = new_embeddings
-
+```
 6. Evaluating the model and visualizing the predictions.
 
 ## Dataset
