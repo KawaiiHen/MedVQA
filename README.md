@@ -1,6 +1,6 @@
 # Medical Visual Question Answering (VQA) with BLIP and PathVQA
 
-This project focuses on building a Medical Visual Question Answering (VQA) system using the BLIP model (Kindly check our anaylysis of the BLIP model in the FINAL_DL.docx) and the PathVQA dataset. The goal is to analyze medical images and answer corresponding questions about the image content. 
+This project focuses on building a Medical Visual Question Answering (VQA) system using the BLIP model and the PathVQA dataset. The goal is to analyze medical images and answer corresponding questions about the image content. 
 
 ## Project Overview
 
@@ -42,7 +42,7 @@ dataset = load_dataset("flaviagiammarino/path-vqa")
 ```
 
 ## Model Architecture
-The project leverages the BLIP (Bootstrapped Language-Image Pretraining) model, which is pre-trained for visual question answering tasks. The architecture includes:
+The project leverages the BLIP (Bootstrapped Language-Image Pretraining) model, which is pre-trained for visual question answering tasks. The architecture (Kindly check our anaylysis of the BLIP model in the FINAL_DL.docx)  includes: 
 
 1. Image Encoder: Extracts visual features from medical images.
 2. Text Encoder: Processes the questions and answers.
