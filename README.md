@@ -8,9 +8,9 @@ Medical Visual Question Answering (VQA) involves using machine learning models t
 
 The workflow involves mainly these 5 steps and some keynote :
 
-1. Loading and preprocessing the PathVQA dataset.
-2. Tokenizing text (questions and answers) and processing images.
-3. Extending the BLIP model to handle the medical vocabulary. 
+*1. Loading and preprocessing the PathVQA dataset.*
+*2. Tokenizing text (questions and answers) and processing images.*
+*3. Extending the BLIP model to handle the medical vocabulary.*
 As Medical VQA requires domain-specific vocabulary. The project's tokenizer is expanded to include unknown tokens present in the PathVQA dataset, allowing the model to handle medical terminology.
 ```python
 # Tokenize dataset and add unknown tokens
@@ -18,7 +18,7 @@ unknown_tokens = set(token_counter.keys()) - vocab_tokens
 text_processor.tokenizer.add_tokens(list(unknown_tokens))
 ```
   
-4. Training the model on the PathVQA dataset.
+*4. Training the model on the PathVQA dataset.*
 The model's text embeddings and output layers are extended to handle the newly added tokens
 ```python
 # Extend the embedding and linear layers
